@@ -1,0 +1,22 @@
+State
+
+description : la liste de booléens C par exemple (0,1,0,1,1) indique s'il y a un mur. 
+		un mur fait 3 cm
+
+2 actions utilisateurs
+
+go -> le ninja avance à pas régulier
+jump -> le ninja saute pour courir la tète à l'envers
+
+3 algorithmes 
+
+B = un ninja qui court et peut sauter
+A = cours sur le plan C
+C = Plan
+
+1 process
+
+win : A such that BC
+lose : not A and not C =
+le score est la distance parcourue à la vitesse v. * le nombre de win
+
