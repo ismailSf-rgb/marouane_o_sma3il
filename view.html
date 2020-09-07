@@ -7,12 +7,34 @@
 		<style> 
 			canvas {
 				z-index: -1;
-				background-color: green;
+				background-color: #e68181;
 			}
+			p {
+  				animation-duration: 3s;
+  				animation-name: slidein;
+			}
+			.slidein {
+  				animation-duration: 3s;
+  				animation-name: slidein;
+  				animation-iteration-count: infinite;
+  				animation-direction: alternate;
+			}
+
+			@keyframes slidein {
+  				from {
+    			margin-left:100%;
+    			width:300%
+  			}
+  
+  			to {
+    			margin-left:0%;
+    			width:100%;
+  			}}
+	}
 			
 			.win {
-				border-bottom : 3px solid gray;			
-				background-color: rgb(184, 224, 176);
+				border-bottom : 3px solid #f0f0f0;			
+				background-color: #f0f0f0;
 				max-width: 100%;
 				float: center;
 				margin-top: 11rem;
@@ -20,13 +42,9 @@
 			}
 
 			body{
-  				color: white;
+  				color: black;
 				z-index: 0;
-  				background: rgb(2,0,36);
-  				background: -moz-linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(24,176,207,0.2105041845839899) 36%);
-  				background: -webkit-linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(24,176,207,0.2105041845839899) 36%);
-  				background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(24,176,207,0.2105041845839899) 36%);
-  				filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#020024",endColorstr="#18b0cf",GradientType=1);
+  				background-color: rgb(142, 140, 185);
   				font-size-adjust: auto;
   				cursor: pointer;
 			}
@@ -37,11 +55,11 @@
 
 	<body>
 		<div class="win">	
+			<p class="slidein"> ninja </p>
 			<canvas>
-
+				
 			</canvas>
-
 		<script src="./play.js"/>
-		<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-	</body>
+		<script src="./playTested.js"/>
+		</body>
 </html>
