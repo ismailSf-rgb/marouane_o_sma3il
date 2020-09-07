@@ -7,30 +7,36 @@
 		<style> 
 			canvas {
 				z-index: -1;
-				background-color: #e68181;
+				background-color: #77cc85;
+				max-width: 100%
 			}
 			p {
   				animation-duration: 3s;
   				animation-name: slidein;
+				z-index: 1;
+				color: black;
 			}
 			.slidein {
   				animation-duration: 3s;
   				animation-name: slidein;
   				animation-iteration-count: infinite;
   				animation-direction: alternate;
+				z-index: 1;
+				overflow-inline: true;
 			}
 
 			@keyframes slidein {
   				from {
     			margin-left:100%;
     			width:300%
-  			}
+  				}
   
-  			to {
+  				to {
     			margin-left:0%;
     			width:100%;
-  			}}
-	}
+  				}
+			}
+	
 			
 			.win {
 				border-bottom : 3px solid #f0f0f0;			
@@ -44,7 +50,7 @@
 			body{
   				color: black;
 				z-index: 0;
-  				background-color: rgb(142, 140, 185);
+  				background-color: rgb(255, 255, 255);
   				font-size-adjust: auto;
   				cursor: pointer;
 			}
@@ -55,10 +61,11 @@
 
 	<body>
 		<div class="win">	
-			<p class="slidein"> ninja </p>
 			<canvas>
-				
 			</canvas>
+			<p class="slidein"> ninja </p>
+			<p class="slidein"> obstacle </p>	
+			<p id="output"> obstacle </p>	
 		<script src="./play.js"/>
 		<script src="./playTested.js"/>
 		</body>
