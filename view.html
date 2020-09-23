@@ -5,30 +5,20 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
 		<style> 
-			canvas {
-				z-index: -1;
-				background-color: #77cc85;
-				max-width: 100%
-			}
-			p {
-  				animation-duration: 3s;
-  				animation-name: slidein;
-				z-index: 1;
-				color: black;
-			}
+			
 			.slidein {
   				animation-duration: 3s;
   				animation-name: slidein;
   				animation-iteration-count: infinite;
   				animation-direction: alternate;
-				z-index: 1;
+				z-index: 2;
 				overflow-inline: true;
 			}
 
 			@keyframes slidein {
   				from {
     			margin-left:100%;
-    			width:300%
+    			width:0%
   				}
   
   				to {
@@ -45,11 +35,12 @@
 				float: center;
 				margin-top: 11rem;
 				padding: 1.31rem;
+				text-align: center;
+				z-index: 1;
 			}
 
 			body{
   				color: black;
-				z-index: 0;
   				background-color: rgb(255, 255, 255);
   				font-size-adjust: auto;
   				cursor: pointer;
@@ -61,11 +52,8 @@
 
 	<body>
 		<div class="win">	
-			<canvas>
-			</canvas>
-			<p class="slidein"> ninja </p>
-			<p class="slidein"> obstacle </p>	
-			<p id="output"> obstacle </p>	
+			<img src="background.png" id="pos1">
+			<span class="slidein" id="pos2"> ninja </span>	
 		<script src="./play.js"/>
 		<script src="./playTested.js"/>
 		</body>
