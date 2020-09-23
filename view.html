@@ -7,12 +7,15 @@
 		<style> 
 			
 			.slidein {
-  				animation-duration: 3s;
+  				animation-duration: 5s;
   				animation-name: slidein;
   				animation-iteration-count: infinite;
-  				animation-direction: alternate;
-				z-index: 2;
-				overflow-inline: true;
+  				animation-direction: normal;
+				z-index: 3;
+			}
+
+			#game {
+				position: absolute;
 			}
 
 			@keyframes slidein {
@@ -36,7 +39,7 @@
 				margin-top: 11rem;
 				padding: 1.31rem;
 				text-align: center;
-				z-index: 1;
+				z-index: 2;
 			}
 
 			body{
@@ -51,9 +54,11 @@
 	</head>
 
 	<body>
-		<div class="win">	
-			<img src="background.png" id="pos1">
-			<span class="slidein" id="pos2"> ninja </span>	
+		<div class="win">
+			<div id="game">
+				<img src="background.png">
+			</div>	
+			<span class="slidein"> ninja </span>	
 		<script src="./play.js"/>
 		<script src="./playTested.js"/>
 		</body>

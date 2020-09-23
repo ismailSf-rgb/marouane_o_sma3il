@@ -1,4 +1,4 @@
-var robot1 = document.getElementsByClassName("win");
+var robot1 = document.getElementsById("game");
 robot1.addEventListener("animationstart", listener, false);
 robot1.addEventListener("animationstart", listener, false);
 robot1.addEventListener("animationend", listener, false);
