@@ -11,11 +11,15 @@
   				animation-name: slidein;
   				animation-iteration-count: infinite;
   				animation-direction: normal;
-				z-index: 3;
+				z-index: 2;
 			}
 
+			.back {
+				z-index:1;
+			}
 			#game {
-				position: absolute;
+				float: left;
+				z-index:2;
 			}
 
 			@keyframes slidein {
@@ -31,35 +35,26 @@
 			}
 	
 			
-			.win {
-				border-bottom : 3px solid #f0f0f0;			
-				background-color: #f0f0f0;
-				max-width: 100%;
-				float: center;
-				margin-top: 11rem;
-				padding: 1.31rem;
-				text-align: center;
-				z-index: 2;
-			}
+		
 
 			body{
   				color: black;
   				background-color: rgb(255, 255, 255);
   				font-size-adjust: auto;
-  				cursor: pointer;
+  				text-align: center;
+				padding: 13%;
 			}
 
 
 		</style>
 	</head>
 
-	<body>
-		<div class="win">
+	<body>	
+		    <img class="back" src="background.png">
 			<div id="game">
-				<img src="background.png">
+				<span class="slidein"> ninja </span>	
 			</div>	
-			<span class="slidein"> ninja </span>	
 		<script src="./play.js"/>
 		<script src="./playTested.js"/>
-		</body>
+	</body>
 </html>
